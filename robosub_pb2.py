@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rrobosub.proto\x12\x07robosub\">\n\x08Position\x12\x10\n\x08latitude\x18\x01 \x01(\x02\x12\x11\n\tlongitude\x18\x02 \x01(\x02\x12\r\n\x05\x64\x65pth\x18\x03 \x01(\x02\"0\n\x04Pose\x12\x0c\n\x04roll\x18\x01 \x01(\x02\x12\r\n\x05pitch\x18\x02 \x01(\x02\x12\x0b\n\x03yaw\x18\x03 \x01(\x02\"\xb4\x01\n\x08WayPoint\x12\n\n\x02id\x18\x01 \x01(\r\x12#\n\x08position\x18\x02 \x01(\x0b\x32\x11.robosub.Position\x12\x1b\n\x04pose\x18\x03 \x01(\x0b\x32\r.robosub.Pose\x12.\n\x0ctraverse_cmd\x18\x04 \x01(\x0e\x32\x18.robosub.TraverseCommand\x12*\n\nrecord_cmd\x18\x05 \x01(\x0e\x32\x16.robosub.RecordCommand\"\xd8\x01\n\x11\x43ontrollerMessage\x12\x11\n\x04time\x18\x01 \x01(\rH\x00\x88\x01\x01\x12.\n\x0ctraverse_cmd\x18\x02 \x01(\x0e\x32\x18.robosub.TraverseCommand\x12*\n\nrecord_cmd\x18\x03 \x01(\x0e\x32\x16.robosub.RecordCommand\x12&\n\x08path_cmd\x18\x04 \x01(\x0e\x32\x14.robosub.PathCommand\x12#\n\x08waypoint\x18\x05 \x01(\x0b\x32\x11.robosub.WayPointB\x07\n\x05_time\"\x81\x01\n\x10TelemetryMessage\x12\x11\n\x04time\x18\x01 \x01(\rH\x00\x88\x01\x01\x12#\n\x08position\x18\x02 \x01(\x0b\x32\x11.robosub.Position\x12\x1b\n\x04pose\x18\x03 \x01(\x0b\x32\r.robosub.Pose\x12\x0f\n\x07\x62\x61ttery\x18\x04 \x01(\x02\x42\x07\n\x05_time*K\n\x0fTraverseCommand\x12\x11\n\rTRAVERSE_NONE\x10\x00\x12\x12\n\x0eTRAVERSE_START\x10\x01\x12\x11\n\rTRAVERSE_STOP\x10\x02*S\n\rRecordCommand\x12\x0f\n\x0bRECORD_NONE\x10\x00\x12\x10\n\x0cRECORD_START\x10\x01\x12\x0f\n\x0bRECORD_STOP\x10\x02\x12\x0e\n\nRECORD_PIC\x10\x03*L\n\x0bPathCommand\x12\r\n\tPATH_NONE\x10\x00\x12\x0c\n\x08PATH_ADD\x10\x01\x12\x0f\n\x0bPATH_REMOVE\x10\x02\x12\x0f\n\x0bPATH_UPDATE\x10\x03\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rrobosub.proto\x12\x07robosub\">\n\x08Position\x12\x10\n\x08latitude\x18\x01 \x01(\x02\x12\x11\n\tlongitude\x18\x02 \x01(\x02\x12\r\n\x05\x64\x65pth\x18\x03 \x01(\x02\"0\n\x04Pose\x12\x0c\n\x04roll\x18\x01 \x01(\x02\x12\r\n\x05pitch\x18\x02 \x01(\x02\x12\x0b\n\x03yaw\x18\x03 \x01(\x02\"\xb4\x01\n\x08WayPoint\x12\n\n\x02id\x18\x01 \x01(\r\x12#\n\x08position\x18\x02 \x01(\x0b\x32\x11.robosub.Position\x12*\n\nrecord_cmd\x18\x03 \x01(\x0e\x32\x16.robosub.RecordCommand\x12.\n\x0cmovement_cmd\x18\x04 \x01(\x0e\x32\x18.robosub.MovementCommand\x12\x1b\n\x04pose\x18\x05 \x01(\x0b\x32\r.robosub.Pose\"\xb6\x02\n\x11\x43ontrollerMessage\x12\x11\n\x04time\x18\x01 \x01(\rH\x00\x88\x01\x01\x12.\n\x0ctraverse_cmd\x18\x02 \x01(\x0e\x32\x18.robosub.TraverseCommand\x12.\n\x0cmovement_cmd\x18\x03 \x01(\x0e\x32\x18.robosub.MovementCommand\x12*\n\nrecord_cmd\x18\x04 \x01(\x0e\x32\x16.robosub.RecordCommand\x12,\n\x0bsensors_cmd\x18\x05 \x01(\x0e\x32\x17.robosub.SensorsCommand\x12&\n\x08path_cmd\x18\x06 \x01(\x0e\x32\x14.robosub.PathCommand\x12#\n\x08waypoint\x18\x07 \x01(\x0b\x32\x11.robosub.WayPointB\x07\n\x05_time\"\x81\x01\n\x10TelemetryMessage\x12\x11\n\x04time\x18\x01 \x01(\rH\x00\x88\x01\x01\x12#\n\x08position\x18\x02 \x01(\x0b\x32\x11.robosub.Position\x12\x1b\n\x04pose\x18\x03 \x01(\x0b\x32\r.robosub.Pose\x12\x0f\n\x07\x62\x61ttery\x18\x04 \x01(\x02\x42\x07\n\x05_time*_\n\x0fTraverseCommand\x12\x11\n\rTRAVERSE_NONE\x10\x00\x12\x12\n\x0eTRAVERSE_START\x10\x01\x12\x11\n\rTRAVERSE_STOP\x10\x02\x12\x12\n\x0eTRAVERSE_PAUSE\x10\x03*M\n\x0fMovementCommand\x12\x11\n\rMOVEMENT_NONE\x10\x00\x12\x11\n\rMOVEMENT_POSE\x10\x01\x12\x14\n\x10MOVEMENT_YAW_360\x10\x02*S\n\rRecordCommand\x12\x0f\n\x0bRECORD_NONE\x10\x00\x12\x10\n\x0cRECORD_START\x10\x01\x12\x0f\n\x0bRECORD_STOP\x10\x02\x12\x0e\n\nRECORD_PIC\x10\x03*G\n\x0eSensorsCommand\x12\x10\n\x0cSENSORS_NONE\x10\x00\x12\x11\n\rSENSORS_START\x10\x01\x12\x10\n\x0cSENSORS_STOP\x10\x02*M\n\x0bPathCommand\x12\r\n\tPATH_NONE\x10\x00\x12\x0e\n\nPATH_CLEAR\x10\x01\x12\x0c\n\x08PATH_ADD\x10\x02\x12\x11\n\rPATH_FINALIZE\x10\x03\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -21,12 +21,16 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'robosub_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _globals['_TRAVERSECOMMAND']._serialized_start=674
-  _globals['_TRAVERSECOMMAND']._serialized_end=749
-  _globals['_RECORDCOMMAND']._serialized_start=751
-  _globals['_RECORDCOMMAND']._serialized_end=834
-  _globals['_PATHCOMMAND']._serialized_start=836
-  _globals['_PATHCOMMAND']._serialized_end=912
+  _globals['_TRAVERSECOMMAND']._serialized_start=768
+  _globals['_TRAVERSECOMMAND']._serialized_end=863
+  _globals['_MOVEMENTCOMMAND']._serialized_start=865
+  _globals['_MOVEMENTCOMMAND']._serialized_end=942
+  _globals['_RECORDCOMMAND']._serialized_start=944
+  _globals['_RECORDCOMMAND']._serialized_end=1027
+  _globals['_SENSORSCOMMAND']._serialized_start=1029
+  _globals['_SENSORSCOMMAND']._serialized_end=1100
+  _globals['_PATHCOMMAND']._serialized_start=1102
+  _globals['_PATHCOMMAND']._serialized_end=1179
   _globals['_POSITION']._serialized_start=26
   _globals['_POSITION']._serialized_end=88
   _globals['_POSE']._serialized_start=90
@@ -34,7 +38,7 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['_WAYPOINT']._serialized_start=141
   _globals['_WAYPOINT']._serialized_end=321
   _globals['_CONTROLLERMESSAGE']._serialized_start=324
-  _globals['_CONTROLLERMESSAGE']._serialized_end=540
-  _globals['_TELEMETRYMESSAGE']._serialized_start=543
-  _globals['_TELEMETRYMESSAGE']._serialized_end=672
+  _globals['_CONTROLLERMESSAGE']._serialized_end=634
+  _globals['_TELEMETRYMESSAGE']._serialized_start=637
+  _globals['_TELEMETRYMESSAGE']._serialized_end=766
 # @@protoc_insertion_point(module_scope)
