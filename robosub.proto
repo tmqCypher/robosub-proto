@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package robosub;
+
+
+enum TraverseCommand {
+    TRAVERSE_NONE = 0;
+    TRAVERSE_START = 1;
+    TRAVERSE_STOP = 2;
+}
+
+enum RecordCommand {
+    RECORD_NONE = 0;
+    RECORD_START = 1;
+    RECORD_STOP = 2;
+    RECORD_PIC = 3;
+}
+
+enum PathCommand {
+    PATH_NONE = 0;
+    PATH_ADD = 1;
+    PATH_REMOVE = 2;
+    PATH_UPDATE = 3;
+}
+
+message Position {
+    float latitude = 1;
+    float longitude = 2;
+    float depth = 3;
+}
+
+message Pose {
+    float roll = 1;
+    float pitch = 2;
+    float yaw = 3;
+}
+
+message WayPoint {
+    uint32 id = 1;
+    Position position = 2;
+    Pose pose = 3;
+    TraverseCommand traverse_cmd = 4;
+    RecordCommand record_cmd = 5;
+}
+
+message ControllerMessage {
+    optional uint32 time = 1;
+    TraverseCommand traverse_cmd = 2;
+    RecordCommand record_cmd = 3;
+    PathCommand path_cmd = 4;
+    WayPoint waypoint = 5;
+}
+
+message TelemetryMessage {
+    optional uint32 time = 1;
+    Position position = 2;
+    Pose pose = 3;
+    float battery = 4;
+}
+
