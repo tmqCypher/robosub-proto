@@ -7,6 +7,13 @@ enum TraverseCommand {
     TRAVERSE_NONE = 0;
     TRAVERSE_START = 1;
     TRAVERSE_STOP = 2;
+    TRAVERSE_PAUSE = 3;
+}
+
+enum MovementCommand {
+    MOVEMENT_NONE = 0;
+    MOVEMENT_POSE = 1;
+    MOVEMENT_YAW_360 = 2;
 }
 
 enum RecordCommand {
@@ -16,11 +23,17 @@ enum RecordCommand {
     RECORD_PIC = 3;
 }
 
+enum SensorsCommand {
+    SENSORS_NONE = 0;
+    SENSORS_START = 1;
+    SENSORS_STOP = 2;
+}
+
 enum PathCommand {
     PATH_NONE = 0;
-    PATH_ADD = 1;
-    PATH_REMOVE = 2;
-    PATH_UPDATE = 3;
+    PATH_CLEAR = 1;
+    PATH_ADD = 2;
+    PATH_FINALIZE = 3;
 }
 
 message Position {
@@ -38,17 +51,19 @@ message Pose {
 message WayPoint {
     uint32 id = 1;
     Position position = 2;
-    Pose pose = 3;
-    TraverseCommand traverse_cmd = 4;
-    RecordCommand record_cmd = 5;
+    RecordCommand record_cmd = 3;
+    MovementCommand movement_cmd = 4;
+    Pose pose = 5;
 }
 
 message ControllerMessage {
     optional uint32 time = 1;
     TraverseCommand traverse_cmd = 2;
-    RecordCommand record_cmd = 3;
-    PathCommand path_cmd = 4;
-    WayPoint waypoint = 5;
+    MovementCommand movement_cmd = 3;
+    RecordCommand record_cmd = 4;
+    SensorsCommand sensors_cmd = 5;
+    PathCommand path_cmd = 6;
+    WayPoint waypoint = 7;
 }
 
 message TelemetryMessage {
