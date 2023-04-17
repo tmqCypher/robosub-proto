@@ -51,13 +51,13 @@ message Pose {
 message WayPoint {
     uint32 id = 1;
     Position position = 2;
-    RecordCommand record_cmd = 3;
-    MovementCommand movement_cmd = 4;
-    Pose pose = 5;
+    Pose pose = 3;
+    RecordCommand record_cmd = 4;
+    MovementCommand movement_cmd = 5;
 }
 
 message ControllerMessage {
-    optional uint32 time = 1;
+    uint32 time = 1;
     TraverseCommand traverse_cmd = 2;
     MovementCommand movement_cmd = 3;
     RecordCommand record_cmd = 4;
@@ -67,9 +67,10 @@ message ControllerMessage {
 }
 
 message TelemetryMessage {
-    optional uint32 time = 1;
+    uint32 time = 1;
     Position position = 2;
     Pose pose = 3;
     float battery = 4;
+    uint current_waypoint = 5;
 }
 
