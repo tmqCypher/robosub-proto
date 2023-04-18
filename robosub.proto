@@ -71,6 +71,6 @@ message TelemetryMessage {
     Position position = 2;
     Pose pose = 3;
     float battery = 4;
-    uint current_waypoint = 5;
+    uint32 current_waypoint = 5;
 }
 
