@@ -8,14 +8,17 @@ enum TraverseCommand {
     TRAVERSE_START = 1;
     TRAVERSE_STOP = 2;
     TRAVERSE_PAUSE = 3;
-    TRAVERSE_SURFACE = 4;
-    TRAVERSE_RETURN = 5;
 }
 
 enum MovementCommand {
     MOVEMENT_NONE = 0;
-    MOVEMENT_POSE = 1;
-    MOVEMENT_YAW_360 = 2;
+    MOVEMENT_SURFACE = 1;
+    MOVEMENT_RETURN = 2;
+    MOVEMENT_POSE = 3;
+    MOVEMENT_WAIT_60 = 4;
+    MOVEMENT_WAIT_300 = 5;
+    MOVEMENT_WAIT_600 = 6;
+    MOVEMENT_YAW_360 = 7;
 }
 
 enum RecordCommand {
@@ -54,7 +57,8 @@ message WayPoint {
     Position position = 2;
     Pose pose = 3;
     RecordCommand record_cmd = 4;
-    MovementCommand movement_cmd = 5;
+    SensorsCommand sensors_cmd = 5;
+    MovementCommand movement_cmd = 6;
 }
 
 message ControllerMessage {
