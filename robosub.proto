@@ -8,6 +8,8 @@ enum TraverseCommand {
     TRAVERSE_START = 1;
     TRAVERSE_STOP = 2;
     TRAVERSE_PAUSE = 3;
+    TRAVERSE_SURFACE = 4;
+    TRAVERSE_RETURN = 5;
 }
 
 enum MovementCommand {
@@ -33,7 +35,6 @@ enum PathCommand {
     PATH_NONE = 0;
     PATH_CLEAR = 1;
     PATH_ADD = 2;
-    PATH_FINALIZE = 3;
 }
 
 message Position {
